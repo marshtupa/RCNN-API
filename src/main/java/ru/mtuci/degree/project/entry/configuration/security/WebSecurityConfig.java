@@ -1,4 +1,4 @@
-package ru.mtuci.degree.project.entry.security.config;
+package ru.mtuci.degree.project.entry.configuration.security;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
