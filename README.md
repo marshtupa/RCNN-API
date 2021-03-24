@@ -20,6 +20,7 @@ docker run -p 1080:80 -p 1025:25 maildev/maildev
 
 ## Usage
 #### Sign Up
+To complete SignUp lookup at [MailDev UI](http://192.168.99.100:1080/#/) and click at verification link 
 ```bash
 curl --location --request POST 'localhost:8080/api/v1/registration' \
 --header 'Content-Type: application/json' \
