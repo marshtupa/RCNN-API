@@ -27,7 +27,11 @@ curl --location --request POST 'localhost:8080/api/v1/registration' \
 --data-raw '{
     "firstName": "Bogdan",
     "lastName": "Marshtupa",
-    "email": "marshtupa18@gmail.ru",
+    "email": "marshtupa@mtuci.ru",
     "password": "password"
 }'
 ```
+#### Sign In
+[Click](http://localhost:8080)
+Login: email
+Password: password
