@@ -33,5 +33,7 @@ curl --location --request POST 'localhost:8080/api/v1/registration' \
 ```
 #### Sign In
 [Click](http://localhost:8080)
+
 Login: email
+
 Password: password
