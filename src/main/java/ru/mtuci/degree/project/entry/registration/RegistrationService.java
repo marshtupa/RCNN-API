@@ -36,7 +36,7 @@ public class RegistrationService {
 
         String verificationLink = configuration.getVerificationLinkBase() + token;
         emailService.send(request.getEmail(), emailBuilder.buildEmail(request.getFirstName(), verificationLink));
-        return token;
+        return "Success! We send mail to verify and activate you account";
     }
 
     @Transactional

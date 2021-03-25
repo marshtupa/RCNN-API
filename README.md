@@ -31,9 +31,13 @@ curl --location --request POST 'localhost:8080/api/v1/registration' \
     "password": "password"
 }'
 ```
-#### Sign In
-[Click](http://localhost:8080)
 
-Login: email
+#### User controller
 
-Password: password
+```bash
+curl -u marshtupa@mtuci.ru:password http://localhost:8080/api/v1/user
+```
+
+```bash
+curl -u marshtupa@mtuci.ru:password http://localhost:8080/api/v1/user/1
+```

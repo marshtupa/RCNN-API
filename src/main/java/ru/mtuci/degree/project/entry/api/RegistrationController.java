@@ -10,7 +10,7 @@ import ru.mtuci.degree.project.entry.registration.RegistrationService;
 @RequestMapping(path = "api/v1/registration")
 public class RegistrationController {
 
-    private RegistrationService registrationService;
+    private final RegistrationService registrationService;
 
     @PostMapping
     public String register(@RequestBody RegistrationRequest request) {

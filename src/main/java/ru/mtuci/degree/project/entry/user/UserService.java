@@ -34,9 +34,9 @@ public class UserService implements UserDetailsService {
     public String signUpUser(User user) {
         Optional<User> userOptional = userRepository.findByEmail(user.getEmail());
 
-        if (userOptional.isPresent()) {
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
+        if (userOptional.isPresent()) {
             if (!userOptional.get().equals(user)) {
                 throw new IllegalStateException("email already used");
             }
@@ -59,10 +59,10 @@ public class UserService implements UserDetailsService {
         tokenService.saveConfirmationToken(
                 confirmationToken);
 
-        return "Success! We send mail to verify and activate you account";
+        return token;
     }
 
-    public int enableUser(String email) {
-        return userRepository.enableUser(email);
+    public void enableUser(String email) {
+        userRepository.enableUser(email);
     }
 }
