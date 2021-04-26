@@ -10,7 +10,6 @@ docker run -d -p 4444:5432 \
            --name entry \
            -e POSTGRES_PASSWORD=password \
            -e POSTGRES_DB=registration \
-           -v fnsnv-fns-volume:/var/lib/postgresql/data \
            postgres
 ```
 #### [MailDev](https://github.com/maildev/maildev)
@@ -19,6 +18,9 @@ docker run -p 1080:80 -p 1025:25 maildev/maildev
 ```
 
 ## Usage
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/10960260-465361c6-c298-4dfd-9d63-f397870bd8cd?action=collection%2Ffork&collection-url=entityId%3D10960260-465361c6-c298-4dfd-9d63-f397870bd8cd%26entityType%3Dcollection%26workspaceId%3Dd886d45c-314d-450c-ba0b-dad7300104a3)
+
 #### Sign Up
 To complete SignUp lookup at [MailDev UI](http://192.168.99.100:1080/#/) and click at verification link 
 ```bash

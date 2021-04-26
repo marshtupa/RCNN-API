@@ -3,7 +3,7 @@ package ru.mtuci.degree.project.entry.registration;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.mtuci.degree.project.entry.configuration.Configurations;
+import ru.mtuci.degree.project.entry.configuration.RegistrationConfigurations;
 import ru.mtuci.degree.project.entry.email.EmailBuilder;
 import ru.mtuci.degree.project.entry.email.EmailService;
 import ru.mtuci.degree.project.entry.email.EmailValidator;
@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 public class RegistrationService {
 
     private final ConfirmationTokenService tokenService;
-    private final Configurations configuration;
+    private final RegistrationConfigurations configuration;
     private final EmailValidator emailValidator;
     private final EmailService emailService;
     private final EmailBuilder emailBuilder;
@@ -34,7 +34,7 @@ public class RegistrationService {
         String token = userService.signUpUser(
                 new User(request.getFirstName(), request.getLastName(), request.getEmail(), request.getPassword(), UserRole.USER));
 
-        String verificationLink = configuration.getVerificationLinkBase() + token;
+        String verificationLink = configuration.getVerificationBaseUrl() + token;
         emailService.send(request.getEmail(), emailBuilder.buildEmail(request.getFirstName(), verificationLink));
         return "Success! We send mail to verify and activate you account";
     }

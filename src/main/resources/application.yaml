@@ -5,11 +5,18 @@ server:
 
 entry:
   registration:
-    verification:
-      base:
-        url: http://localhost:8080/api/v1/registration/confirm?token=
+    verification-base-url: http://localhost:8080/api/v1/registration/confirm?token=
+
+file:
+  upload-dir: /Users/b.marshtupa/uploads
 
 spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
   datasource:
     url: jdbc:postgresql://192.168.99.100:4444/registration
     username: postgres
