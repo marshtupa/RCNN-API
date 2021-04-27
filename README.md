@@ -1,4 +1,4 @@
-# Entry
+# RCNN-API
 BackEnd project for registration and login
 
 ## Installation
@@ -7,7 +7,7 @@ Run DB in docker. Port to access `4444`
 ```bash
 docker run -d -p 4444:5432 \
            --restart=on-failure:10 \
-           --name entry \
+           --name rcnn-api \
            -e POSTGRES_PASSWORD=password \
            -e POSTGRES_DB=registration \
            postgres

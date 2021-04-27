@@ -11,10 +11,10 @@
 	</parent>
 
 	<groupId>ru.mtuci.degree.project</groupId>
-	<artifactId>entry</artifactId>
+	<artifactId>rcnn-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>entry</name>
-	<description>BackEnd project for registration and login</description>
+	<name>rcnn-api</name>
+	<description>BackEnd for use Mask-RCNN</description>
 
 	<properties>
 		<java.version>11</java.version>
