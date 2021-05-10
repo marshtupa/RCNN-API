@@ -1,5 +1,5 @@
 # RCNN-API
-BackEnd project for registration and login
+BackEnd for use Mask-RCNN
 
 ## Installation
 #### PostgreSQL
